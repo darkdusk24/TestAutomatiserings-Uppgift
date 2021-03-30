@@ -9,5 +9,8 @@ When I press the sign up button
 Then <outcome> should be visible on the screen
 
 Examples:
-|email|username|password|outcome|
-|
+|						email|		username|			password|						outcome|
+|"Test@mail.com"|"functional"|"Testing-123"|"Check your email"|
+|"Test@mail.com"|"OneHundredOne"|"Testing-123"|"Enter a value less than 100 characters long"|
+|"Test@mail.com"|"alreadyInUse"|"Testing-123"|"Another user with this username already exists. Maybe it's your evil twin. Spooky."|
+|""|"functional"|"Testing-123"|"No email inputted"|
